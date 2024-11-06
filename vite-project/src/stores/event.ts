@@ -10,3 +10,13 @@ export const useEventStore = defineStore('event', {
     }
   }
 })
+export const useEventStor = defineStore('event', {
+  state: (): EventState => ({
+    event: null
+  }),
+  actions: {
+    setEvent(event: Event): void {
+      this.event = event
+    }
+  }
+})
